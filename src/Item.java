@@ -1,11 +1,11 @@
-public class item {
+public class Item {
     private int id;
     private int value;
     private int weight;
     private double relativeValue;
 
 
-    public item(int id, int weight, int value) {
+    public Item(int id, int weight, int value) {
         this.id = id;
         this.weight = weight;
         this.value = value;
