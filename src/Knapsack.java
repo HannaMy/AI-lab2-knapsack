@@ -42,6 +42,17 @@ public class Knapsack {
         itemsInKnapsack.addFirst(item);
     }
 
+    public Item getItem(int index){
+        return itemsInKnapsack.get(index);
+    }
+
+    public void removeItem(int index){
+        value -= itemsInKnapsack.get(index).getValue();
+        weightCurrent -= itemsInKnapsack.get(index).getWeight();
+        itemsInKnapsack.remove(index);
+
+    }
+
     public LinkedList getItems(){
         return itemsInKnapsack;
     }

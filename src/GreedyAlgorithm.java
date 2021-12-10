@@ -18,9 +18,10 @@ public class GreedyAlgorithm {
                     knapsacks[j].addWeight(items[i].getWeight());
                     knapsacks[j].addValue(items[i].getValue());
                     knapsacks[j].addItem(items[i]);
+                    items[i] = null;
                     break;
                 }
-                System.out.println("Item " + i + "could not be added in knapsack " + j );
+                //System.out.println("Item " + i + "could not be added in knapsack " + j );
             }
 
         }

@@ -17,8 +17,8 @@ public class ReadInput {
             Item[] items = new Item[nbrOfItems];
             for (int i = 0; i < nbrOfItems; i++) {
                 String[] inputs = reader.readLine().split(" ");
-                int weight = Integer.parseInt(inputs[1]);
                 int value = Integer.parseInt(inputs[0]);
+                int weight = Integer.parseInt(inputs[1]);
                 items[i] = new Item(weight, value);
             }
             ProblemInfo problemInfo = new ProblemInfo(knapsacks, items);

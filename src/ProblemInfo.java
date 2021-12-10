@@ -45,6 +45,34 @@ public class ProblemInfo {
         this.items = items;
     }
 
+    public void addItem(Item item) {
+        for (int i = 0; i < items.length; i++) {
+            if (items[i] == null) {
+                items[i] = item;
+                break;
+            }
+        }
+    }
+
+
+    public int getTotalValue() {
+        int totalValue = 0;
+        for (int i = 0; i < knapsacks.length; i++) {
+            totalValue += knapsacks[i].getValue();
+        }
+        return totalValue;
+    }
+
+    public int getNbrOfItemsLeft(){
+        int size = 0;
+        for (int i = 0; i < items.length; i++) {
+            if(items[i] != null){
+                size++;
+            }
+        }
+
+        return size;
+    }
 
     @Override
     public String toString() {
@@ -57,7 +85,9 @@ public class ProblemInfo {
 
         string += "Items: ";
         for (int i = 0; i < items.length; i++) {
-            string += items[i].toString() + "\n";
+            if(items[i] != null) {
+                string += items[i].toString() + "\n";
+            }
         }
         return string;
     }
