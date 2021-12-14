@@ -10,9 +10,9 @@ public class GreedyAlgorithm {
         items = problemInfo.getItems();
 
         for (int i = 0; i < items.length; i++) {
-            System.out.println(items[i].toString());
+           // System.out.println(items[i].toString());
             for (int j = 0; j <knapsacks.length; j++) {
-                System.out.println(knapsacks[j].getWeightRemaining());
+                //System.out.println(knapsacks[j].getWeightRemaining());
                 if (knapsacks[j].getWeightRemaining() >= items[i].getWeight()) {
 
                     knapsacks[j].addWeight(items[i].getWeight());

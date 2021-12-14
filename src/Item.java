@@ -47,8 +47,10 @@ public class Item {
         this.id = id;
     }
 
+
     @Override
     public String toString() {
-        return "Item " + id + " Weight: " + weight +  " Value: " + value;
+        //return "Item " + id + " Weight: " + weight +  " Value: " + value;
+        return "(" + value + " " + weight + ")";
     }
 }

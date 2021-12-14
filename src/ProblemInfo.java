@@ -63,6 +63,31 @@ public class ProblemInfo {
         return totalValue;
     }
 
+    public int getTotalWeight() {
+        int totalWeight = 0;
+        for (int i = 0; i < knapsacks.length; i++) {
+            totalWeight += knapsacks[i].getWeightCurrent();
+        }
+        return totalWeight;
+    }
+
+    public int getTotalWeightCapacity() {
+
+        int totalWeightCapacity = 0;
+        for (int i = 0; i < knapsacks.length; i++) {
+            totalWeightCapacity += knapsacks[i].getWeightCapacity();
+        }
+        return totalWeightCapacity;
+    }
+    public int getTotalWeightRemaining() {
+
+        int totalWeightRemaining = 0;
+        for (int i = 0; i < knapsacks.length; i++) {
+            totalWeightRemaining += knapsacks[i].getWeightRemaining();
+        }
+        return totalWeightRemaining;
+    }
+
     public int getNbrOfItemsLeft(){
         int size = 0;
         for (int i = 0; i < items.length; i++) {
